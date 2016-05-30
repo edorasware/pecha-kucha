@@ -1,7 +1,7 @@
 /* Updated: 2011.6.5 ENR
    Author: Erik Runyon
    ----------------------------------------------------*/
-   
+
 /* html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
    v1.4 2009-07-27 | Authors:Eric Meyer & Richard Clark
    html5doctor.com/html-5-reset-stylesheet/
@@ -9,7 +9,7 @@
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,article, aside, figure, footer, header, hgroup, menu, nav, section, menu,
-time, mark, audio, video {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;}
+time, mark, audio, video {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; font-family: 'Raleway', serif;}
 body {line-height:1;}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}
 nav ul {margin:0; padding:0; list-style:none;}
@@ -36,6 +36,7 @@ h1.br {top:auto; left:auto; bottom:60px; right:30px;}
 h1.bl {top:auto; bottom:60px; left:30px;}
 p {margin:0 0 2em; line-height:1.4em;}
 img {max-width:100%; max-height:100%;}
+section ul {display:table; margin:200px auto; font-size: 80px;}
 
 .box {width:300px; height:300px;}
 .code {padding:20px; font-family:Courier; color:rgb(0,255,0); background-color:rgba(0,0,0,0.9); -webkit-box-shadow:0 0 10px rgba(0,0,0,0.8);}
@@ -50,6 +51,7 @@ img.tl {position:absolute; top:0; left:0;} /* Top Left */
 img.bl {position:absolute; bottom:0; left:0;} /* Bottom Left */
 img.tr {position:absolute; top:0; right:0;} /* Top Right */
 img.br {position:absolute; bottom:0; right:0;} /* Bottom Right */
+img.logo {position:absolute; bottom:20; left:0; width: 20%; height: auto;} /* Bottom Left */
 
 /* Used for adjusting the width of images */
 .p10 {width:10%;}
@@ -65,16 +67,16 @@ img.br {position:absolute; bottom:0; right:0;} /* Bottom Right */
 /* STRUCTURE
    ----------------------------------------------------*/
 #slides {width:100%; height:100%;
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#7db9e8), color-stop(100%,#1e5799)); /* Chrome,Safari4+ */
-  background:-webkit-linear-gradient(top, #7db9e8 0%,#1e5799 100%); /* Chrome10+,Safari5.1+ */
-  background:linear-gradient(top, #7db9e8 0%,#1e5799 100%); /* W3C */
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#c70d30), color-stop(100%,#1e5799)); /* Chrome,Safari4+ */
+  background:-webkit-linear-gradient(top, #4C0D00 0%,#c70d30 100%); /* Chrome10+,Safari5.1+ */
+  background:linear-gradient(top, #4C0D00 0%,#c70d30 100%); /* W3C */
 }
 
 #footer {overflow:hidden; position:fixed; bottom:0; width:100%; padding:10px 0; background-color:rgba(0,0,0,0.2);}
 #footer p {float:left; margin:0 0 0 20px; line-height:1em;}
 #footer a {color:#fff;}
 #footer a.active {font-weight:bold; color:#ccc; text-decoration:none;}
-#footer ul {position:absolute; top:10px; left:35%; width:500px; margin:0 auto; list-style:none;}
+#footer ul {top:10px; width:500px; margin:0 auto; list-style:none;}
 #footer ul li {display:inline; margin-right:5px;}
 #counter {float:right; margin-right:20px;}
 

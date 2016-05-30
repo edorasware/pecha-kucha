@@ -13,15 +13,13 @@
       slide = 1,
       count = countInit,
       t,
-      running = true
+      running = false
   ;
-  
+
   var Slides = {
-  
+
     init: function() {
-      console.log('init');
       Slides.addNavigation();
-      Slides.doCountdown();
       Slides.pause();
       Slides.changeSlide();
     },
@@ -35,7 +33,7 @@
         $('#slide'+slide).fadeOut();
         ++slide;
         $('#slide'+slide).fadeIn();
-        
+
         $('#footer ul a').removeClass();
         $('#p'+slide).addClass('active');
       }
@@ -44,7 +42,6 @@
     doCountdown: function() {
       if(running) {
         t = setTimeout(function(){
-          console.log('counting down');
           $counter.html(count);
           --count;
           if(count === 0) {
@@ -64,7 +61,7 @@
         ($this.html() == 'Pause') ? $this.html('Play') : $this.html('Pause');
       });
     },
-    
+
     togglePlay: function() {
       if(running === true) {
         clearTimeout(t);
@@ -74,8 +71,8 @@
         Slides.doCountdown();
       }
     },
-    
-    addNavigation: function() {      
+
+    addNavigation: function() {
       var links = '';
       for(i = 1; i <= totalSlides; i++) {
         var active = (i === 1) ? 'active' : '';
@@ -83,22 +80,21 @@
       }
       $('#slidenav').html(links);
     },
-    
+
     changeSlide: function() {
       $('#slidenav a').live('click', function(e){
         e.preventDefault();
         var $this = $(this);
-        
+
         // stop the timer
         clearTimeout(t);
         running = false;
         $('#pause').html('Play');
-        
+
         // Hide all but the selected slide
         $('.slide:visible').fadeOut();
         $('#footer ul a').removeClass();
         slide = $this.html();
-        console.log('activating slide ' + slide);
         $($this.attr('href')).fadeIn();
         $this.addClass('active');
       });
@@ -106,5 +102,5 @@
 
   };
   Slides.init();
-  
+
 })();
